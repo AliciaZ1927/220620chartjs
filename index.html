@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/b46c175131.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <title>Chart.js</title>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="navigation">
+            <ul>
+                <li><a href="#">
+                        <span class="icon"><i class="fa-solid fa-skull"></i></span>
+                        <span class="title">Death toll</span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><i class="fa-solid fa-table-columns"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><i class="fa-solid fa-person"></i></span>
+                        <span class="title">Users</span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><i class="fa-solid fa-message"></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><i class="fa-solid fa-circle-question"></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- search -->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                <!-- userImage -->
+                <div class="user">
+                    <img src="./images/ghost.png" alt="penguin">
+                </div>
+            </div>
+
+            <!-- cards -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">183,732</div>
+                        <div class="cardName">Total death</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-skull-crossbones"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">76,855</div>
+                        <div class="cardName">Female</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-venus"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">106,877</div>
+                        <div class="cardName">Male</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-mars"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">30</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- charts -->
+            <div class="graphBox">
+                <div class="box">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+            <div class="graphBox2">
+                <div class="box">
+                    <canvas id="myChart3"></canvas>
+                </div>
+            </div>
+            <div class="graphBox3">
+                <div class="box">
+                    <canvas id="myChart4"></canvas>
+                </div>
+            </div>
+
+            <!-- details list -->
+            <div class="details">
+                <div class="yearDeath">
+                    <div class="cardHeader">
+                        <h2>2021 Death</h2>
+                        <a href="#" class="btn1">View other years</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Month</td>
+                                <td>Female</td>
+                                <td>Male</td>
+                                <td>Total</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>January</td>
+                                <td>6766</td>
+                                <td>9566</td>
+                                <td>16332</td>
+                            </tr>
+                            <tr>
+                                <td>February</td>
+                                <td>6295</td>
+                                <td>8561</td>
+                                <td>14856</td>
+                            </tr>
+                            <tr>
+                                <td>March</td>
+                                <td>6903</td>
+                                <td>9535</td>
+                                <td>16438</td>
+                            </tr>
+                            <tr>
+                                <td>April</td>
+                                <td>5897</td>
+                                <td>8379</td>
+                                <td>14276</td>
+                            </tr>
+                            <tr>
+                                <td>May</td>
+                                <td>6486</td>
+                                <td>8622</td>
+                                <td>15108</td>
+                            </tr>
+                            <tr>
+                                <td>June</td>
+                                <td>6950</td>
+                                <td>9689</td>
+                                <td>16639</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>6545</td>
+                                <td>8978</td>
+                                <td>15523</td>
+                            </tr>
+                            <tr>
+                                <td>August</td>
+                                <td>6210</td>
+                                <td>8742</td>
+                                <td>14952</td>
+                            </tr>
+                            <tr>
+                                <td>September</td>
+                                <td>5734</td>
+                                <td>8160</td>
+                                <td>13894</td>
+                            </tr>
+                            <tr>
+                                <td>October</td>
+                                <td>6044</td>
+                                <td>8371</td>
+                                <td>14415</td>
+                            </tr>
+                            <tr>
+                                <td>November</td>
+                                <td>6519</td>
+                                <td>9041</td>
+                                <td>15560</td>
+                            </tr>
+                            <tr>
+                                <td>December</td>
+                                <td>6506</td>
+                                <td>9233</td>
+                                <td>15739</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Users -->
+                <div class="users">
+                    <div class="cardHeader">
+                        <h2>Concurrent Users</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/kapipara.png" alt="kapipara"></div></td>
+                            <td><h4>Capybbara</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/cat1.png" alt="kapipara"></div></td>
+                            <td><h4>cat</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/cat2.png" alt="kapipara"></div></td>
+                            <td><h4>cat</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/cat3.png" alt="kapipara"></div></td>
+                            <td><h4>cat</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/cat4.png" alt="kapipara"></div></td>
+                            <td><h4>cat</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/kaeru.png" alt="kapipara"></div></td>
+                            <td><h4>kaeru</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/alpaca.png" alt="kapipara"></div></td>
+                            <td><h4>alpaca</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/koala.png" alt="kapipara"></div></td>
+                            <td><h4>koala</h4><span>Japan</span></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBox"><img src="./images/whale.png" alt="kapipara"></div></td>
+                            <td><h4>whale</h4><span>Japan</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./index.js"></script>
+    <script src="./chart.js"></script>
+
+</body>
+
+</html>
